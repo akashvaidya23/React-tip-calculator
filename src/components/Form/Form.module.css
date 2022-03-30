@@ -1,0 +1,42 @@
+.head{
+    background-color: #003399;
+    width: 100%;
+    height:55px;
+    text-align: center;
+    font-size: medium;
+}
+
+.amount{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.inputAmount{
+    width:700px;
+    align-items: center;
+    height: 25px;
+    border-radius: 20px;
+    border-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.amt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    border: 1px solid brown;
+    padding: 20px;
+}
+
+.matter{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
