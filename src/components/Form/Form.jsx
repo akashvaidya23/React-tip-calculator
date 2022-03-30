@@ -1,6 +1,6 @@
 import styles from './Form.module.css';
 import { useState } from "react";
-import Button from "../Button/Button";
+import Buttons from "../Button/Button";
 import CustomerList from "../CustomerList/CustomerList";
 import Dropdown from "../Dropdown/Dropdown";
 import Input from "../Input/Input";
@@ -25,13 +25,16 @@ const Form = () => {
         setCustomer(custom);
     }
 
-    const [tip, setTip] = useState('');
+    const [tip, setTip] = useState([]);
     const btnClick = () => {
+        let tipT = [];
         const tipAmount = bill * service / 100;
-        setTip(tipAmount);
+        tipT.push(tipAmount);
+        console.log(tipT);
+        setTip(tipT);
         getBill('');
         setService('');
-        setCustomer(customer);
+        setCustomer('');
     }
 
     return (
@@ -47,24 +50,26 @@ const Form = () => {
                         InputchangeHandler={billChange}
                         value={bill} />
                 </div>
-                <div className={styles.matter}>
-                    <div>
-                        <Label name="How was the service." />
-                        <br />
-                        <Dropdown serviceChangeHandler={serviceChange} />
-                    </div>
-                    <div>
-                        <Label name="Enter customer Name" />
-                        <br />
-                        <Input type="text"
-                            InputchangeHandler={customerHandler}
-                            value={customer} />
-                    </div>
-                    <div>
-                        <Button text="Add" clickHandler={btnClick} />
+                <div className='container' style={{ marginTop: '50px', border: '1px solid black', padding: '10px' }}>
+                    <div className="row align-items-start">
+                        <div className='col' style={{ textAlign: "center" }}>
+                            <Label name="How was the service." />
+                            <br />
+                            <Dropdown serviceChangeHandler={serviceChange} />
+                        </div>
+                        <div className='col' style={{ textAlign: "center" }}>
+                            <Label name="Enter customer Name" />
+                            <br />
+                            <Input type="text"
+                                InputchangeHandler={customerHandler}
+                                value={customer} />
+                        </div>
+                        <div className='col' style={{ textAlign: "center", justifyContent: 'center', marginTop: '10px' }}>
+                            <Buttons text="Add Customer" clickHandler={btnClick} />
+                        </div>
                     </div>
                 </div>
-                <div>
+                <div style={{ textAlign: "center" }}>
                     <CustomerList data={tip} name={customer} />
                 </div>
             </div>

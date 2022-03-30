@@ -1,7 +1,7 @@
 const CustomerList = (props) => {
     return (
         <div>
-            <p>The tip amount is Rs.{props.data}</p>
+            <p>{props.data}</p>
         </div>
     );
 };

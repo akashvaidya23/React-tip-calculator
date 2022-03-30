@@ -1,7 +1,9 @@
-const Button = (props) => {
+import { Button } from 'reactstrap';
+const Buttons = (props) => {
     return (
-        <button onClick={props.clickHandler}>{props.text}</button>
+        // <button onClick={props.clickHandler}>{props.text}</button>
+        <Button color="danger" onClick={props.clickHandler}>{props.text}</Button>
     );
 };
 
-export default Button;
+export default Buttons;

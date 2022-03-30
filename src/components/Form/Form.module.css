@@ -32,11 +32,3 @@
     border: 1px solid brown;
     padding: 20px;
 }
-
-.matter{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
