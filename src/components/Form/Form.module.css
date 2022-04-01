@@ -1,20 +1,22 @@
-.head{
+.head {
     background-color: #003399;
+    color: aliceblue;
     width: 100%;
-    height:55px;
+    height: 55px;
     text-align: center;
     font-size: medium;
+    padding-top: 7px;
 }
 
-.amount{
+.amount {
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: large;
 }
 
-.inputAmount{
-    width:700px;
+.inputAmount {
+    width: 700px;
     align-items: center;
     height: 25px;
     border-radius: 20px;
@@ -23,7 +25,7 @@
     font-weight: bold;
 }
 
-.amt{
+.amt {
     display: flex;
     align-items: center;
     justify-content: center;
