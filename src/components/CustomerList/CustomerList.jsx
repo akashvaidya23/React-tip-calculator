@@ -1,10 +1,10 @@
 import styles from './CustomerList.module.css';
 const CustomerList = (props) => {
     const tip = props.data;
-    const tipAmt = tip.map((amount) => {
+    const tipAmt = tip.map((amount, index) => {
         return (
             <>
-                <li key={amount.id}>
+                <li key={index}>
                     Rs. {amount}
                 </li>
             </>
@@ -15,7 +15,7 @@ const CustomerList = (props) => {
     const customerNames = customers.map((cust, index) => {
         return (
             <>
-                <li>
+                <li key={index}>
                     {cust}
                 </li>
             </>

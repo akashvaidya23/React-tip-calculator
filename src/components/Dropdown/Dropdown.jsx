@@ -1,11 +1,11 @@
 const Dropdown = (props) => {
-    const servicetype = props.serviceChangeHandler;
+    const servicetype = props.value;
     return (
-        <select className={props.class} onChange={servicetype} style={props.style}>
-            <option value="">Select an option</option>
-            <option value="20">Excellent</option>
-            <option value="10">Good</option>
-            <option value="5">Average</option>
+        <select className="form-select" onChange={props.serviceChangeHandler} style={props.style} value={servicetype}>
+            <option value="-1" >Select an option</option>
+            <option value='20' >Excellent</option>
+            <option value='10' >Good</option>
+            <option value='5'>Average</option>
         </select>
     )
 }
